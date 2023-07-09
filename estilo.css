@@ -1,0 +1,427 @@
+body{
+    margin: 0;
+    min-width: 100vh;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    /* display: grid;
+    place-content: left; */
+}
+/*Contenedor de Logout, Catalogo, Lista Catalogo, Lista Pedidos, Cuenta*/
+.menu{
+    background-color: rgb(52, 42, 68);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+.menu .titulo{
+    color: #fff;
+}
+.menu ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.menu ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+.menu ul li a:hover{
+    color: #2856b9;
+}
+.menu .cta{
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+.menu .cta:hover{
+    color: #fff;
+    background-color: #016bb3;
+}
+.menu .menu-item:hover{
+    color: var(--main-color);
+}
+/*Contenedor de Fondo de las páginas. Se recomienda colocarlo en todas las paginas*/
+.contenido {
+    background: url(fotos/fondo.jpg) center / cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*Contenedor de la pagina login.php*/
+.login-contenedor{
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    height: 30%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    /* display: grid;
+    place-content: left; */
+
+}
+
+.login-contenedor .log-form-contenedor{
+    width: 90%;
+    height: 90%;
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow: auto;
+}
+
+.login-contenedor .log-form-contenedor .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.login-contenedor .log-form-contenedor input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.login-contenedor .log-form-contenedor input[type=submit]{
+    margin-top: 10px;
+}
+
+.login-contenedor .log-form-contenedor input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #94a4b4;
+}
+
+.login-contenedor .log-form-contenedor form a{
+    margin-top: 10px;
+}
+
+/*Página donde se aloja la tabla de confirmar pedido*/
+.contenido-pedido {
+    background: url(fotos/fondo.jpg) center / cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+.contenido-pedido form.confirmar{
+    background-color: rgba(255, 255, 255, 0.74);
+}
+.fondo{
+    background: url(fotos/fondo.jpg) center / cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-content: center;
+
+}
+.contenido-pedido form.confirmar input.btnAceptar{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20 12px 20;
+}
+.tabla-pedido{
+    display: grid;
+    place-content: left;
+    border-collapse: collapse;
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    border-color: black;
+}
+.tabla-pedido th{
+    background-color: rgba(255, 255, 255, 0.74);
+    color: Black;
+    font-weight: bold;
+}
+.tabla-pedido td{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    font-weight: bold;
+}
+.registro-contenedor{
+    max-width: 700px;
+    width: 100%;
+    padding: 20px 10px;
+    display: grid;
+    place-content: left;
+    /* border-radius: 15px; */
+
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.registro-contenedor .reg-cont-contenido{
+    width: 95%;
+    height: 100%;
+    background-color: #fffb;
+    margin: .18rem auto;
+    border-radius: .6rem;
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow: auto;
+}
+
+.registro-contenedor .reg-cont-contenido form input[type=submit]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* padding-left: 15px; */
+    font-size: 16px;
+}
+
+.registro-contenedor .reg-cont-contenido form input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #94a4b4;
+    border: none;
+}
+
+.registro-contenedor form .detalles-user{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .detalles-user .input-box{
+    width: calc(100% / 2 - 20px);
+}
+
+.detalles-user .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.detalles-user .input-box input{
+    height: 45px;
+    width: 90%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.msg-registro-container{
+    background-color: #fffb;
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: .8rem;
+    padding: 2px 10px;
+    backdrop-filter: blur(7px);
+}
+
+.msg-registro-container .msg-registro{
+    color: red;
+}
+
+/* LISTA PLATILLOS */
+.table{
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    height: 95%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.table table{
+    width: 100%;
+}
+
+.table .table-header{
+    /*text-align: center;*/
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.table h1{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.table .table-header .add-pedido{
+    width: 250px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+.table .table-header .add-pedido form button{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgb(15, 192, 15);
+    color: aliceblue;
+    border: none;
+    
+}
+
+.table .table-header .add-pedido form button:hover{
+    cursor: pointer;
+    background-color: rgb(13, 141, 13);
+    box-shadow: 0 .4rem .8rem #0005;
+    
+}
+
+.table .table-header .add-pedido form button .img-add{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    margin-left: 0px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.table .table-header .add-pedido form button .text-add{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    margin-left: 0px;
+    /* margin-top: 10px; */
+    z-index: 1;
+}
+
+.table .table-header .search-container{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    
+}
+
+.table .table-header .search-container form input{
+    width: 300px;
+    height: 50px;
+    background: aliceblue;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.table .table-header .search-container form span{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 10px;
+    z-index: 1;
+    color: #4f5b66;
+}
+
+.table .table-header .search-container form span i:hover{
+    color: #67b3e6;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+}
+
+.table .table-body{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+}
+
+.table .table-body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table .table-body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+.table .table-body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+.table table,th,td{
+    padding: 1rem;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+}
+
+.table tbody tr:nth-child(even){
+    background-color: #0000000b;
+}
+
+.table tbody tr:hover{
+    background-color: #fff6;
+}
