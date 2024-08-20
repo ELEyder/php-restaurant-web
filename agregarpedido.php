@@ -6,11 +6,10 @@
         fnRedirect("index.php");
     }
 
-    $cn=fnConnect($msg);
+    $cn=fnConnect();
     //Si hay error en la conexion
     if(!$cn){
         //Mostrar el mensaje de error
-        fnShowMsg("Error", $msg);
         say("</body>");
         return; //Salir
     }
@@ -131,7 +130,3 @@
     if(isset($_POST["btnBack"])){
         fnRedirect('index.php');
     }
-
-
-
-?>

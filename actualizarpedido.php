@@ -1,7 +1,7 @@
 <?php
 require_once("funciones.php");
 
-$cn=fnConnect($msg);
+$cn=fnConnect();
 //Si hay error en la conexion
 if(!$cn){
     //Mostrar el mensaje de error

@@ -5,7 +5,7 @@
     if($_SESSION["nombre"]!="admin"){
         fnRedirect("index.php");
     }
-    $cn=fnConnect($msg);
+    $cn=fnConnect();
     if(!$cn){
         //Mostrar mensaje de error
         fnShowMsg("Error",$msg);
@@ -20,7 +20,9 @@
 <link href="estilo.css" rel="stylesheet">
 </head>
 <body>
-    <?phpfnMenu();?>
+    <?php
+        fnMenu();
+    ?>
     <div class="contenido">
     <main class="table">
         <div class="table-header">

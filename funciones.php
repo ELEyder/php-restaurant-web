@@ -63,24 +63,19 @@ function fnMenu(){
         say("<li class='menu-item'>".fnLink("index.php?op=4","","Mostrar ListaCatalogo","Lista Catalogo")."</li>");
         say("<li class='menu-item'>".fnLink("index.php?op=5","","Mostrar Lista Pedidos","Lista Pedidos")."</li>");
     }
-    say("<li class='cta'><span>Cuenta: ".$_SESSION["nombre"]."</span></li>");
+    if($_SESSION["codigo"]){
+        say("<li class='cta'><span>Cuenta: ".$_SESSION["nombre"]."</span></li>");
+    }
     say("</ul>");
     say("</div>");
 }
 
-function fnConnect( &$msg ){
-	$cn=mysqli_connect("localhost","root","");
-	if(!$cn){
-		$msg = "Error en la conexión.";
-		return 0;
-	}
-	$n = mysqli_select_db($cn,"tr");
-	if(!$n){
-		$msg = "Base de datos no existe.";
-		mysqli_close($cn);
-		return 0;
-	}
-	return $cn;
+function fnConnect(){
+    try {
+        $cn = mysqli_connect("localhost","root","");
+        $n = mysqli_select_db($cn,"tr");
+        return $cn;
+    } catch(Exception $e){
+        return "Error en la conexión, intenta ejecutar el archivo database.sql en phpAdmin";
+    }
 }
-
-?>

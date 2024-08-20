@@ -13,7 +13,6 @@
 </head>
 <body>
     <?php
-        // require("titulo.html");
         fnMenu();
         say("<div class='contenido'>");
         $op=3;

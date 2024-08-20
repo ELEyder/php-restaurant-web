@@ -5,7 +5,7 @@
     if($_SESSION["nombre"]!="admin"){
         fnRedirect("index.php");
     }
-    $cn=fnConnect($msg);
+    $cn=fnConnect();
     if(!$cn){
         //Mostrar mensaje de error
         fnShowMsg("Error",$msg);

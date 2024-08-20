@@ -1,6 +1,6 @@
 <?php
     require_once("funciones.php");
-    $cn=fnConnect($msg);
+    $cn=fnConnect();
     //Si hay error en la conexion
     if(!$cn){
         //Mostrar el mensaje de error
@@ -15,7 +15,7 @@
         }
     
         fnSessionStart();
-    $cn=fnConnect($msg);
+    $cn=fnConnect();
     $rs = mysqli_query($cn,"select * from platos where PlatoID = ". $plato);
     $row = mysqli_fetch_array($rs,MYSQLI_ASSOC);
 ?>
