@@ -73,7 +73,7 @@ function fnMenu(){
 function fnConnect(){
     try {
         $cn = mysqli_connect("localhost","root","");
-        $n = mysqli_select_db($cn,"tr");
+        $n = mysqli_select_db($cn,"restaurant");
         return $cn;
     } catch(Exception $e){
         return "Error en la conexión, intenta ejecutar el archivo database.sql en phpAdmin";
